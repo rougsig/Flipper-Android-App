@@ -2,6 +2,7 @@ import com.flipper.gradle.ConfigurationPlugin
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: ConfigurationPlugin
 
@@ -14,6 +15,8 @@ dependencies {
     implementation Libs.ANNOTATIONS
     implementation Libs.CORE_KTX
     implementation Libs.APPCOMPAT
+    implementation "com.airbnb.android:epoxy:3.11.0"
+    kapt "com.airbnb.android:epoxy-processor:3.11.0"
 
     testImplementation TestingLib.JUNIT
     androidTestImplementation TestingLib.ANDROIDX_TEST_EXT_JUNIT
