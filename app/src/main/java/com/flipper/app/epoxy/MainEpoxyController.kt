@@ -25,10 +25,6 @@ internal class MainEpoxyController : TypedEpoxyController<List<CellItem>>() {
     previouslyBoundModel: EpoxyModel<*>?
   ) {
     val lp = StaggeredGridLayoutManager.LayoutParams(holder.itemView.layoutParams)
-    lp.isFullSpan = when ((boundModel as CellItemViewModel_).model().size) {
-      CellItem.Size.ONE_ONE, CellItem.Size.ONE_TWO -> false
-      CellItem.Size.TWO_ONE, CellItem.Size.TWO_TWO -> true
-    }
     lp.marginEnd = 32
     lp.marginStart = 32
     lp.topMargin = 32
